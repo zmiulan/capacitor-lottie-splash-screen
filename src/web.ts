@@ -9,7 +9,7 @@ export class CapacitorLottieSplashScreenWeb
     console.log('ECHO', options);
     return options;
   }
-  async appLoaded(): Promise<{}> {
+  async appLoaded(): Promise<any> {
     return 0;
   }
   async isAnimating(): Promise<{ isAnimating: boolean; }> {
