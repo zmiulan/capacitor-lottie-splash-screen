@@ -48,7 +48,7 @@ extension AnimationEventListener {
            let filename = path.components(separatedBy: ".").first {
             animationView = .init(name: filename)
             animationView!.frame = UIScreen.main.bounds
-            animationView!.contentMode = .scaleAspectFill
+            animationView!.contentMode = .scaleAspectFit
             animationView!.loopMode = .playOnce
             animationView!.animationSpeed = 1
             view.addSubview(animationView!)
