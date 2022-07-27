@@ -1,12 +1,28 @@
-# @get-local/capacitor-lottie-splash-screen
+# @morphood/capacitor-lottie-splash-screen
 
 Lottie splash screen plugin for capacitor
 
 ## Install
 
 ```bash
-npm install @get-local/capacitor-lottie-splash-screen
+npm install @morphood/capacitor-lottie-splash-screen
 npx cap sync
+```
+
+Add to `capacitor.config.ts` or `capcitor.config.json`
+```
+CapacitorLottieSplashScreen: {
+  Enabled: true,
+  LottieAnimationLocation: "public/[web/path/to.json]"
+}
+```
+
+if you were previously using Capacitor Splash Screen set the following in you capacitor config
+```
+SplashScreen: {
+  launchAutoHide: true,
+  launchShowDuration: 0,
+},
 ```
 
 ## API
@@ -42,10 +58,16 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 ### appLoaded()
 
 ```typescript
-appLoaded() => Promise<{}>
+appLoaded() => Promise<any>
 ```
 
-**Returns:** <code>Promise&lt;{}&gt;</code>
+Indicate to the plugin that the app has loaded.
+
+Run as early as possible when your app is loaded.
+This will ensure that on animation end the layer of the splash screen is removed
+and touch interactions will go to the app.
+
+**Returns:** <code>Promise&lt;any&gt;</code>
 
 --------------------
 
