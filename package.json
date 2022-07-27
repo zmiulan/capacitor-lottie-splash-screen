@@ -38,11 +38,12 @@
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api CapacitorLottieSplashScreenPlugin --output-readme README.md --output-json dist/docs.json",
-    "build": "npm run clean && npm run docgen && standard-version && tsc && rollup -c rollup.config.js",
+    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
     "build-module": "npm run clean && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
+    "release": "standard-version && npm publish",
     "prepare": "npm run build-module"
   },
   "devDependencies": {
