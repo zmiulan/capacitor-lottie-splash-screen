@@ -1,6 +1,6 @@
 {
   "name": "@morphood/capacitor-lottie-splash-screen",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Lottie splash screen plugin for capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",

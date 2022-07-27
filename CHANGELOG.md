@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/MorphoodInc/capacitor-lottie-splash-screen/compare/v0.0.5...v0.0.6) (2022-07-27)
+
+
+### Features
+
+* ensure podspec for morphood ([9f410ab](https://github.com/MorphoodInc/capacitor-lottie-splash-screen/commit/9f410abe1442c60cecd1557580b1f127d30790bd))
+
 ### 0.0.5 (2022-07-27)
 
 
