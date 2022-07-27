@@ -11,7 +11,7 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "GetLocalCapacitorLottieSplashScreen.podspec"
+    "MorphoodCapacitorLottieSplashScreen.podspec"
   ],
   "author": "morphood",
   "license": "MIT",

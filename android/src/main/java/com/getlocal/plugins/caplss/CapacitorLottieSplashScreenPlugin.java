@@ -1,4 +1,4 @@
-package com.getlocal.plugins.caplss;
+package com.morphood.plugins.caplss;
 
 import android.animation.Animator;
 import android.app.Dialog;

@@ -1,4 +1,4 @@
-package com.getlocal.plugins.caplss;
+package com.morphood.plugins.caplss;
 
 import android.animation.Animator;
 import android.app.Dialog;
@@ -47,7 +47,7 @@ public class CapacitorLottieSplashScreen {
     }
 
     public void ShowLottieSplashScreenDialog(Context context, String lottiePath) {
-        dialog = new Dialog(context, R.style.AppTheme_GetLocalLottieSplashScreen);
+        dialog = new Dialog(context, R.style.AppTheme_MorphoodLottieSplashScreen);
         dialog.setContentView(R.layout.activity_lottie_splash_screen);
         dialog.setCancelable(false);
         loadLottie(dialog, lottiePath);

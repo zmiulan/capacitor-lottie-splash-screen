@@ -1,5 +1,5 @@
 <resources>
-    <style name="AppTheme.GetLocalLottieSplashScreen" >
+    <style name="AppTheme.MorphoodLottieSplashScreen" >
         <item name="android:colorBackground">@android:color/transparent</item>
     </style>
 </resources>
