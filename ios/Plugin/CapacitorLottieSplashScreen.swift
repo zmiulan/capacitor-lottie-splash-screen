@@ -18,7 +18,7 @@ extension AnimationEventListener {
 @objc public class CapacitorLottieSplashScreen: NSObject {
     
     
-    private var animationView: AnimationView?
+    private var animationView: LottieAnimationView?
     private var isAppLoaded = false
     private var isAnimationEnded = !CapacitorLottieSplashScreenPlugin.isEnabledStatic
     
