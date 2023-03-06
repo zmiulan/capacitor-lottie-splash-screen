@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/MorphoodInc/capacitor-lottie-splash-screen/compare/v0.0.6...v0.1.0) (2023-03-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* update packages
+
+### Bug Fixes
+
+* **ios:** use new lottie animation view ([822e25f](https://github.com/MorphoodInc/capacitor-lottie-splash-screen/commit/822e25fac79f44cb41c44845f9c4b6ab674611cd))
+
+
+* update packages ([e71e549](https://github.com/MorphoodInc/capacitor-lottie-splash-screen/commit/e71e54934401d32b6f31bab1c7c9c32c1904c7a8))
+
 ### [0.0.6](https://github.com/MorphoodInc/capacitor-lottie-splash-screen/compare/v0.0.5...v0.0.6) (2022-07-27)
 
 
