@@ -86,7 +86,7 @@ isAnimating() => Promise<{ isAnimating: boolean; }>
 ### addListener('onAnimationEnd', ...)
 
 ```typescript
-addListener(eventName: 'onAnimationEnd', listenerFunc: () => void) => Promise<PluginListenerHandle> & PluginListenerHandle
+addListener(eventName: 'onAnimationEnd', listenerFunc: () => void) => Promise<PluginListenerHandle> 
 ```
 
 | Param              | Type                          |
