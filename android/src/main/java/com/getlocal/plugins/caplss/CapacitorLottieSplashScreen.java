@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.content.Context;
+import java.io.File;
 
 import androidx.annotation.Nullable;
 
@@ -46,11 +48,11 @@ public class CapacitorLottieSplashScreen {
         return !isAnimationEnded;
     }
 
-    public void ShowLottieSplashScreenDialog(Context context, String lottiePath) {
+    public void ShowLottieSplashScreenDialog(Context context, String lottiePath, String lottieUrl) {
         dialog = new Dialog(context, R.style.MorphoodLottieSplashScreen);
         dialog.setContentView(R.layout.activity_lottie_splash_screen);
         dialog.setCancelable(false);
-        loadLottie(dialog, lottiePath);
+        loadLottie(dialog, lottiePath, lottieUrl, context);
 
         View decorView = dialog.getWindow().getDecorView();
         int uiOptions = decorView.getSystemUiVisibility();
@@ -62,10 +64,33 @@ public class CapacitorLottieSplashScreen {
         dialog.show();
     }
 
-    private void loadLottie(Dialog dialog, String lottiePath){
+
+
+    public void clearLottieDiskCache(Context context) {
+        File cacheDir = new File(context.getCacheDir(), "lottie_network_cache");
+        if (cacheDir.exists()) {
+            deleteRecursive(cacheDir);
+        }
+    }
+
+    private void deleteRecursive(File fileOrDirectory) {
+        if (fileOrDirectory.isDirectory()) {
+            for (File child : fileOrDirectory.listFiles()) {
+                deleteRecursive(child);
+            }
+        }
+        fileOrDirectory.delete();
+    }
+
+    private void loadLottie(Dialog dialog, String lottiePath, String lottieUrl, Context context){
 
         LottieAnimationView lottieAnimationView = dialog.findViewById(R.id.animationView);
-        lottieAnimationView.setAnimation(lottiePath);
+        if(!lottieUrl.isEmpty()) {
+          lottieAnimationView.setAnimationFromUrl(lottieUrl);
+        } else {
+          lottieAnimationView.setAnimation(lottiePath);
+        }
+        lottieAnimationView.enableMergePathsForKitKatAndAbove(true);
         lottieAnimationView.setRepeatCount(0);
         lottieAnimationView.setSpeed(1F);
         lottieAnimationView.playAnimation();

@@ -51,7 +51,8 @@ public class CapacitorLottieSplashScreenPlugin extends Plugin {
     private void ShowLottieSplashScreenDialog() {
         Context context = this.getContext();
         String lottiePath = this.getConfig().getString("LottieAnimationLocation");
-        implementation.ShowLottieSplashScreenDialog(context, lottiePath);
+        String lottieUrl = this.getConfig().getString("LottieAnimationURL");
+        implementation.ShowLottieSplashScreenDialog(context, lottiePath, lottieUrl);
     }
 
     @PluginMethod
@@ -66,5 +67,12 @@ public class CapacitorLottieSplashScreenPlugin extends Plugin {
         JSObject ret = new JSObject();
         ret.put("isAnimating", isAnimating);
         call.resolve(ret);
+    }
+
+    @PluginMethod
+    public void clearCache(PluginCall call) {
+        Context context = this.getContext();
+        implementation.clearLottieDiskCache(context);
+        call.resolve();
     }
 }
