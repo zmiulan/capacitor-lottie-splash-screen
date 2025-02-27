@@ -32,7 +32,7 @@ SplashScreen: {
 * [`echo(...)`](#echo)
 * [`appLoaded()`](#apploaded)
 * [`isAnimating()`](#isanimating)
-* [`addListener('onAnimationEnd', ...)`](#addlisteneronanimationend)
+* [`addListener('onAnimationEnd', ...)`](#addlisteneronanimationend-)
 * [Interfaces](#interfaces)
 
 </docgen-index>
@@ -86,7 +86,7 @@ isAnimating() => Promise<{ isAnimating: boolean; }>
 ### addListener('onAnimationEnd', ...)
 
 ```typescript
-addListener(eventName: 'onAnimationEnd', listenerFunc: () => void) => Promise<PluginListenerHandle> 
+addListener(eventName: 'onAnimationEnd', listenerFunc: () => void) => Promise<PluginListenerHandle>
 ```
 
 | Param              | Type                          |
@@ -94,7 +94,7 @@ addListener(eventName: 'onAnimationEnd', listenerFunc: () => void) => Promise<Pl
 | **`eventName`**    | <code>'onAnimationEnd'</code> |
 | **`listenerFunc`** | <code>() =&gt; void</code>    |
 
-**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
 
 --------------------
 
