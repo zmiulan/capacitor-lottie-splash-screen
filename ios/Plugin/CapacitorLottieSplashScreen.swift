@@ -48,6 +48,7 @@ extension AnimationEventListener {
            let filename = path.components(separatedBy: ".").first {
             animationView = .init(name: filename)
             animationView!.frame = UIScreen.main.bounds
+            animationView!.backgroundColor = UIColor.black // TODO: config
             animationView!.contentMode = .scaleAspectFill
             animationView!.loopMode = .playOnce
             animationView!.animationSpeed = 1
